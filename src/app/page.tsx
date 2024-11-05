@@ -6,8 +6,6 @@ import { Testimonials } from "@/components/Testimonials";
 import { Faq } from "@/components/Faq";
 import { Cta } from "@/components/Cta";
 
-import { benefitOne, benefitTwo } from "@/components/data";
-import Benefits from "@/components/Benefits";
 export default function Home() {
   return (
     <Container>
