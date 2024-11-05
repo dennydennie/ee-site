@@ -47,6 +47,7 @@ export default function Home() {
       </SectionTitle>
 
       <Faq />
+      
       <Cta />
     </Container>
   );
