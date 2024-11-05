@@ -2,53 +2,58 @@ import Image from "next/image";
 import React from "react";
 import { Container } from "@/components/Container";
 
-import userOneImg from "../../public/img/user1.jpg";
-import userTwoImg from "../../public/img/user2.jpg";
-import userThreeImg from "../../public/img/user3.jpg";
+// Import client images
+import ceoImage from "../../public/img/clients/client1.jpg";
+import ctoImage from "../../public/img/clients/client2.jpg";
+import managerImage from "../../public/img/clients/client3.jpg";
 
 export const Testimonials = () => {
   return (
     <Container>
       <div className="grid gap-10 lg:grid-cols-2 xl:grid-cols-3">
         <div className="lg:col-span-2 xl:col-auto">
-          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
-            <p className="text-2xl leading-normal ">
-              Share a real <Mark>testimonial</Mark>
-              that hits some of your benefits from one of your popular customer.
+          <div className="flex flex-col justify-between w-full h-full bg-gray-50 px-8 rounded-2xl py-10 dark:bg-trueGray-800">
+            <p className="text-xl leading-normal">
+              Ekspertas Engineering transformed our business operations with their{" "}
+              <Mark>custom software solution</Mark>. Their understanding of the
+              Zimbabwean market and technical expertise delivered exactly what we
+              needed.
             </p>
 
             <Avatar
-              image={userOneImg}
-              name="Sarah Steiner"
-              title="VP Sales at Google"
+              image={ceoImage}
+              name="Tendai Moyo"
+              title="CEO, ZimTech Solutions"
             />
           </div>
         </div>
         <div className="">
-          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
-            <p className="text-2xl leading-normal ">
-              Make sure you only pick the <Mark>right sentence</Mark>
-              to keep it short and simple.
+          <div className="flex flex-col justify-between w-full h-full bg-gray-50 px-8 rounded-2xl py-10 dark:bg-trueGray-800">
+            <p className="text-xl leading-normal">
+              Their <Mark>data analytics platform</Mark> helped us make informed
+              decisions and identify new business opportunities. The team's
+              technical knowledge and local support are outstanding.
             </p>
 
             <Avatar
-              image={userTwoImg}
-              name="Dylan Ambrose"
-              title="Lead marketer at Netflix"
+              image={ctoImage}
+              name="Chiedza Mutasa"
+              title="CTO, African Banking Corporation"
             />
           </div>
         </div>
         <div className="">
-          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
-            <p className="text-2xl leading-normal ">
-              This is an <Mark>awesome</Mark> landing page template I&apos;ve
-              seen. I would use this for anything.
+          <div className="flex flex-col justify-between w-full h-full bg-gray-50 px-8 rounded-2xl py-10 dark:bg-trueGray-800">
+            <p className="text-xl leading-normal">
+              The <Mark>DevOps implementation</Mark> by Ekspertas Engineering
+              significantly improved our deployment process and system reliability.
+              Their ongoing support is exceptional.
             </p>
 
             <Avatar
-              image={userThreeImg}
-              name="Gabrielle Winn"
-              title="Co-founder of Acme Inc"
+              image={managerImage}
+              name="Farai Ndlovu"
+              title="IT Manager, Zimbabwe Telecoms"
             />
           </div>
         </div>
@@ -71,12 +76,15 @@ function Avatar(props: Readonly<AvatarProps>) {
           src={props.image}
           width="40"
           height="40"
-          alt="Avatar"
+          alt={props.name}
           placeholder="blur"
+          className="object-cover w-full h-full"
         />
       </div>
       <div>
-        <div className="text-lg font-medium">{props.name}</div>
+        <div className="text-lg font-medium text-gray-800 dark:text-gray-200">
+          {props.name}
+        </div>
         <div className="text-gray-600 dark:text-gray-400">{props.title}</div>
       </div>
     </div>
@@ -87,7 +95,7 @@ function Mark(props: { readonly children: React.ReactNode }) {
   return (
     <>
       {" "}
-      <mark className="text-indigo-800 bg-indigo-100 rounded-md ring-indigo-100 ring-4 dark:ring-indigo-900 dark:bg-indigo-900 dark:text-indigo-200">
+      <mark className="text-blue-800 bg-blue-100 rounded-md ring-blue-100 ring-4 dark:ring-blue-900 dark:bg-blue-900 dark:text-blue-200">
         {props.children}
       </mark>{" "}
     </>

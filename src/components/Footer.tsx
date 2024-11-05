@@ -4,127 +4,116 @@ import React from "react";
 import { Container } from "@/components/Container";
 
 export function Footer() {
-  const navigation = ["Product", "Features", "Pricing", "Company", "Blog"];
-  const legal = ["Terms", "Privacy", "Legal"];
+  const services = ["Software Development", "Internet Computing", "Data Analysis", "DevOps Engineering", "Cloud Solutions"];
+  const company = ["About Us", "Careers", "Contact", "Blog"];
+  const resources = ["Case Studies", "Documentation", "Privacy Policy", "Terms of Service"];
+
   return (
     <div className="relative">
       <Container>
         <div className="grid max-w-screen-xl grid-cols-1 gap-10 pt-10 mx-auto mt-5 border-t border-gray-100 dark:border-trueGray-700 lg:grid-cols-5">
           <div className="lg:col-span-2">
             <div>
-              {" "}
               <Link
                 href="/"
-                className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100"
+                className="flex items-center space-x-2 text-2xl font-medium text-blue-600 dark:text-gray-100"
               >
                 <Image
-                  src="/img/logo.svg"
-                  alt="N"
+                  src="/img/ekspertas-logo.svg"
+                  alt="Ekspertas Engineering"
                   width="32"
                   height="32"
                   className="w-8"
                 />
-                <span>Nextly</span>
+                <span>Ekspertas Engineering</span>
               </Link>
             </div>
 
             <div className="max-w-md mt-4 text-gray-500 dark:text-gray-400">
-              Nextly is a free landing page & marketing website template for
-              startups and indie projects. Its built with Next.js & TailwindCSS.
-              And its completely open-source.
+              Empowering businesses through innovative technology solutions. 
+              We specialize in software development, data analysis, and DevOps 
+              engineering, helping organizations across Zimbabwe and beyond 
+              achieve their digital transformation goals.
             </div>
 
             <div className="mt-5">
-              <a
-                href="https://vercel.com/?utm_source=web3templates&utm_campaign=oss"
-                target="_blank"
-                rel="noopener"
-                className="relative block w-44"
-              >
-                <Image
-                  src="/img/vercel.svg"
-                  alt="Powered by Vercel"
-                  width="212"
-                  height="44"
-                />
-              </a>
+              <div className="text-gray-500">
+                Harare, Zimbabwe<br />
+                Email: contact@ekspertas.co.zw<br />
+                Phone: +263 XX XXX XXXX
+              </div>
             </div>
           </div>
 
           <div>
+            <h3 className="font-semibold text-gray-800 dark:text-gray-200 mb-3">Services</h3>
             <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0">
-              {navigation.map((item, index) => (
+              {services.map((item, index) => (
                 <Link
                   key={index}
-                  href="/"
-                  className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700"
+                  href={`/services/${item.toLowerCase().replace(/\s+/g, '-')}`}
+                  className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-blue-500 focus:text-blue-500 focus:bg-blue-50 focus:outline-none dark:focus:bg-trueGray-700"
                 >
                   {item}
                 </Link>
               ))}
             </div>
           </div>
+          
           <div>
+            <h3 className="font-semibold text-gray-800 dark:text-gray-200 mb-3">Company</h3>
             <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0">
-              {legal.map((item, index) => (
+              {company.map((item, index) => (
                 <Link
                   key={index}
-                  href="/"
-                  className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700"
+                  href={`/${item.toLowerCase().replace(/\s+/g, '-')}`}
+                  className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-blue-500 focus:text-blue-500 focus:bg-blue-50 focus:outline-none dark:focus:bg-trueGray-700"
                 >
                   {item}
                 </Link>
               ))}
             </div>
           </div>
-          <div className="">
-            <div>Follow us</div>
+
+          <div>
+            <h3 className="font-semibold text-gray-800 dark:text-gray-200 mb-3">Connect With Us</h3>
             <div className="flex mt-5 space-x-5 text-gray-400 dark:text-gray-500">
               <a
-                href="https://twitter.com/web3templates"
+                href="https://linkedin.com/company/ekspertas-engineering"
                 target="_blank"
                 rel="noopener"
+                className="hover:text-blue-500"
+              >
+                <span className="sr-only">LinkedIn</span>
+                <Linkedin />
+              </a>
+              <a
+                href="https://twitter.com/ekspertas_eng"
+                target="_blank"
+                rel="noopener"
+                className="hover:text-blue-500"
               >
                 <span className="sr-only">Twitter</span>
                 <Twitter />
               </a>
               <a
-                href="https://facebook.com/web3templates"
+                href="https://github.com/ekspertas-engineering"
                 target="_blank"
                 rel="noopener"
+                className="hover:text-blue-500"
               >
-                <span className="sr-only">Facebook</span>
-                <Facebook />
-              </a>
-              <a
-                href="https://instagram.com/web3templates"
-                target="_blank"
-                rel="noopener"
-              >
-                <span className="sr-only">Instagram</span>
-                <Instagram />
-              </a>
-              <a href="https://linkedin.com/" target="_blank" rel="noopener">
-                <span className="sr-only">Linkedin</span>
-                <Linkedin />
+                <span className="sr-only">GitHub</span>
+                <Github />
               </a>
             </div>
           </div>
         </div>
 
         <div className="my-10 text-sm text-center text-gray-600 dark:text-gray-400">
-          Copyright © {new Date().getFullYear()}. Made with ♥ by{" "}
-          <a href="https://web3templates.com/" target="_blank" rel="noopener">
-            Web3Templates.
-          </a>{" "}
-          Illustrations from{" "}
-          <a href="https://www.glazestock.com/" target="_blank" rel="noopener ">
-            Glazestock
-          </a>
+          Copyright © {new Date().getFullYear()} Ekspertas Engineering Private Limited. 
+          All rights reserved.
         </div>
       </Container>
-      {/* Do not remove this */}
-      <Backlink />
     </div>
   );
 }
@@ -176,30 +165,14 @@ const Linkedin = ({ size = 24 }) => (
   </svg>
 );
 
-const Backlink = () => {
-  return (
-    <a
-      href="https://web3templates.com"
-      target="_blank"
-      rel="noopener"
-      className="absolute flex px-3 py-1 space-x-2 text-sm font-semibold text-gray-900 bg-white border border-gray-300 rounded shadow-sm place-items-center left-5 bottom-5 dark:bg-trueGray-900 dark:border-trueGray-700 dark:text-trueGray-300"
-    >
-      <svg
-        width="20"
-        height="20"
-        viewBox="0 0 30 30"
-        fill="none"
-        className="w-4 h-4"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <rect width="30" height="29.5385" rx="2.76923" fill="#362F78" />
-        <path
-          d="M10.14 21.94H12.24L15.44 12.18L18.64 21.94H20.74L24.88 8H22.64L19.58 18.68L16.36 8.78H14.52L11.32 18.68L8.24 8H6L10.14 21.94Z"
-          fill="#F7FAFC"
-        />
-      </svg>
-
-      <span>Web3Templates</span>
-    </a>
-  );
-};
+const Github = ({ size = 24 }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+  >
+    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+  </svg>
+);
