@@ -31,7 +31,7 @@ export const Testimonials = () => {
           <div className="flex flex-col justify-between w-full h-full bg-gray-50 px-8 rounded-2xl py-10 dark:bg-trueGray-800">
             <p className="text-xl leading-normal">
               Their <Mark>data analytics platform</Mark> helped us make informed
-              decisions and identify new business opportunities. The team's
+              decisions and identify new business opportunities. The team&apos;s
               technical knowledge and local support are outstanding.
             </p>
 
