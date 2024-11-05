@@ -69,16 +69,16 @@ export const Hero = () => {
               <ClientLogo1 />
             </div>
             <div className="text-gray-400 dark:text-gray-400">
-              <ClientLogo2 />
+              <ClientLogo1 />
             </div>
             <div className="text-gray-400 dark:text-gray-400">
-              <ClientLogo3 />
+              <ClientLogo1 />
             </div>
             <div className="pt-1 text-gray-400 dark:text-gray-400">
-              <ClientLogo4 />
+              <ClientLogo1 />
             </div>
             <div className="pt-2 text-gray-400 dark:text-gray-400">
-              <ClientLogo5 />
+              <ClientLogo1 />
             </div>
           </div>
         </div>

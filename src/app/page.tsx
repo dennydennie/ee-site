@@ -1,16 +1,16 @@
 import { Container } from "@/components/Container";
 import { Hero } from "@/components/Hero";
 import { SectionTitle } from "@/components/SectionTitle";
-import { Benefits } from "@/components/Benefits";
 import { Video } from "@/components/Video";
 import { Testimonials } from "@/components/Testimonials";
 import { Faq } from "@/components/Faq";
 import { Cta } from "@/components/Cta";
 
 import { benefitOne, benefitTwo } from "@/components/data";
+import Benefits from "@/components/Benefits";
 export default function Home() {
   return (
-    <Container children={undefined}>
+    <Container>
       <Hero />
       <SectionTitle
         preTitle="Why Choose Ekspertas Engineering"
@@ -21,8 +21,8 @@ export default function Home() {
         data analysis, and DevOps engineering.
       </SectionTitle>
 
-      <Benefits data={benefitOne} />
-      <Benefits imgPos="right" data={benefitTwo} />
+      <Benefits data={{...benefitOne, image: benefitOne.image.src}} />
+      <Benefits imgPos="right" data={{...benefitTwo, image: benefitTwo.image.src}} />
 
       <SectionTitle
         preTitle="Our Expertise"
@@ -30,7 +30,7 @@ export default function Home() {
       >
         Discover how Ekspertas Engineering can transform your business through our 
         comprehensive range of services. From custom software development to advanced 
-        data analytics, we're here to drive your digital success.
+        data analytics, we&apos;re here to drive your digital success.
       </SectionTitle>
 
       <Video videoId="fZ0D0cnR88E" />
@@ -39,7 +39,7 @@ export default function Home() {
         preTitle="Client Success Stories"
         title="What Our Clients Say About Us"
       >
-        Here's what businesses across Zimbabwe and beyond say about their experience 
+        Here&apos;s what businesses across Zimbabwe and beyond say about their experience 
         working with Ekspertas Engineering.
       </SectionTitle>
 
