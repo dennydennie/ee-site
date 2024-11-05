@@ -21,8 +21,6 @@ export default function Home() {
         data analysis, and DevOps engineering.
       </SectionTitle>
 
-      <Benefits data={{...benefitOne, image: benefitOne.image.src}} />
-      <Benefits imgPos="right" data={{...benefitTwo, image: benefitTwo.image.src}} />
 
       <SectionTitle
         preTitle="Our Expertise"
