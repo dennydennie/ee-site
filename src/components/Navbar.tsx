@@ -41,7 +41,7 @@ export const Navbar = () => {
         <Link href="/" className="flex items-center space-x-2 text-2xl font-medium text-blue-600 dark:text-gray-100">
           <span>
             <Image
-              src="/img/ekspertas-logo.svg"
+              src="/img/logo.svg"
               width="40"
               height="40"
               alt="Ekspertas Engineering"

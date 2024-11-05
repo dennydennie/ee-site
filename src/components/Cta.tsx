@@ -10,7 +10,7 @@ export const Cta = () => {
             Ready to Transform Your Business?
           </h2>
           <p className="mt-2 font-medium text-white text-opacity-90 lg:text-xl">
-            Let's discuss how we can help you achieve your technology goals.
+            Let&apos;s discuss how we can help you achieve your technology goals.
           </p>
         </div>
         <div className="flex-shrink-0 w-full text-center lg:w-auto">

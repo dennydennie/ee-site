@@ -19,7 +19,7 @@ export function Footer() {
                 className="flex items-center space-x-2 text-2xl font-medium text-blue-600 dark:text-gray-100"
               >
                 <Image
-                  src="/img/ekspertas-logo.svg"
+                  src="/img/logo.svg"
                   alt="Ekspertas Engineering"
                   width="32"
                   height="32"
@@ -40,7 +40,7 @@ export function Footer() {
               <div className="text-gray-500">
                 Harare, Zimbabwe<br />
                 Email: contact@ekspertas.co.zw<br />
-                Phone: +263 XX XXX XXXX
+                Phone: +263 776 678 078
               </div>
             </div>
           </div>
