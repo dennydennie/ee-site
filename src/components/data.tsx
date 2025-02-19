@@ -57,18 +57,8 @@ export const benefitTwo = {
       icon: "your-icon",
     },
     {
-      title: "Web Development",
-      desc: "Creating responsive and user-friendly websites",
-      icon: "your-icon",
-    },
-    {
-      title: "Web Hosting",
-      desc: "Reliable hosting solutions for your online presence",
-      icon: "your-icon",
-    },
-    {
-      title: "Email Hosting",
-      desc: "Professional email services for your business",
+      title: "Expert Knowledge",
+      desc: "Our expertise will add value to your operations",
       icon: "your-icon",
     },
   ],

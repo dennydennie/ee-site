@@ -38,7 +38,6 @@ export const Hero = () => {
                   className="w-6 h-6">
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
-                <span>Explore Our Services</span>
               </a>
             </div>
           </div>

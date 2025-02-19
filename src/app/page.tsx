@@ -30,9 +30,15 @@ export default function Home() {
         data analytics, we&apos;re here to drive your digital success.
       </SectionTitle>
 
+      <SectionTitle
+        preTitle="Our Services"
+        title="What We Offer"
+      >
+        At Ekspertas Engineering, we provide a wide range of services including custom software development, data analytics, and DevOps solutions tailored to meet your business needs.
+      </SectionTitle>
       <Services />
 
-      <Video videoId="fZ0D0cnR88E" />
+      {/* <Video videoId="fZ0D0cnR88E" /> */}
 
       <SectionTitle
         preTitle="Client Success Stories"

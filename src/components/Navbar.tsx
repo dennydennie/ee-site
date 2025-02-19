@@ -43,7 +43,7 @@ export const Navbar = () => {
         <div className="flex gap-3 nav__item mr-3 lg:flex ml-auto lg:ml-0 lg:order-2">
           <ThemeChanger />
           <a
-            href="mailto:contact@ekspertas.co.zw"
+            href="https://wa.me/263776678078"
             className="hidden lg:inline-block px-6 py-2 text-white bg-blue-600 rounded-md hover:bg-blue-700 transition-colors"
           >
             Contact Us
@@ -103,7 +103,7 @@ export const Navbar = () => {
                     </div>
                   ))} */}
                   <a
-                    href="mailto:contact@ekspertas.co.zw"
+                    href="https://wa.me/263776678078"
                     className="w-full px-6 py-2 mt-3 text-center text-white bg-blue-600 rounded-md hover:bg-blue-700 transition-colors"
                   >
                     Contact Us
