@@ -6,20 +6,20 @@ import { Disclosure } from "@headlessui/react";
 
 export const Navbar = () => {
   const navigation = [
-    // {
-    //   name: "Services",
-    //   href: "/services",
-    //   submenu: [
-    //     { name: "Software Development", href: "/services/software-development" },
-    //     { name: "Internet Computing", href: "/services/internet-computing" },
-    //     { name: "Data Analysis", href: "/services/data-analysis" },
-    //     { name: "DevOps Engineering", href: "/services/devops" },
-    //   ]
-    // },
-    // {
-    //   name: "About",
-    //   href: "/about",
-    // },
+    {
+      name: "Services",
+      href: "/services",
+      submenu: [
+        { name: "Software Development", href: "/services/software-development" },
+        { name: "Internet Computing", href: "/services/internet-computing" },
+        { name: "Data Analysis", href: "/services/data-analysis" },
+        { name: "DevOps Engineering", href: "/services/devops" },
+      ]
+    },
+    {
+      name: "About",
+      href: "/about",
+    },
   ];
 
   return (
@@ -33,7 +33,7 @@ export const Navbar = () => {
               width="100"
               height="100"
               alt="Ekspertas Engineering"
-              // className="w-20"
+              className="w-20"
             />
           </span>
           <span className="hidden sm:inline-block">Ekspertas Engineering</span>
@@ -79,7 +79,7 @@ export const Navbar = () => {
               {/* Mobile menu */}
               <Disclosure.Panel className="flex flex-wrap w-full my-5 lg:hidden">
                 <>
-                  {navigation.map((item, index) => (
+                  {/* {navigation.map((item, index) => (
                     <div key={index} className="w-full">
                       <Link
                         href={item.href}
@@ -101,7 +101,7 @@ export const Navbar = () => {
                         </div>
                       )}
                     </div>
-                  ))}
+                  ))} */}
                   <a
                     href="mailto:contact@ekspertas.co.zw"
                     className="w-full px-6 py-2 mt-3 text-center text-white bg-blue-600 rounded-md hover:bg-blue-700 transition-colors"
