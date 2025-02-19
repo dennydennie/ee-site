@@ -19,11 +19,10 @@ export function Footer() {
                 className="flex items-center space-x-2 text-2xl font-medium text-blue-600 dark:text-gray-100"
               >
                 <Image
-                  src="/img/logo.svg"
+                  src="/img/logo.jpg"
                   alt="Ekspertas Engineering"
-                  width="32"
-                  height="32"
-                  className="w-8"
+                  width="80"
+                  height="80"
                 />
                 <span>Ekspertas Engineering</span>
               </Link>
@@ -44,7 +43,7 @@ export function Footer() {
               </div>
             </div>
           </div>
-
+{/* 
           <div>
             <h3 className="font-semibold text-gray-800 dark:text-gray-200 mb-3">Services</h3>
             <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0">
@@ -73,7 +72,7 @@ export function Footer() {
                 </Link>
               ))}
             </div>
-          </div>
+          </div> */}
 
           <div>
             <h3 className="font-semibold text-gray-800 dark:text-gray-200 mb-3">Connect With Us</h3>

@@ -5,6 +5,7 @@ import { Video } from "@/components/Video";
 import { Testimonials } from "@/components/Testimonials";
 import { Faq } from "@/components/Faq";
 import { Cta } from "@/components/Cta";
+import { Services } from "@/components/Services";
 
 export default function Home() {
   return (
@@ -14,8 +15,8 @@ export default function Home() {
         preTitle="Why Choose Ekspertas Engineering"
         title="Your Technology Partner in Zimbabwe"
       >
-        Ekspertas Engineering is a leading software development company in Zimbabwe, 
-        delivering cutting-edge solutions in software development, internet computing, 
+        Ekspertas Engineering is a leading software development company in Zimbabwe,
+        delivering cutting-edge solutions in software development, internet computing,
         data analysis, and DevOps engineering.
       </SectionTitle>
 
@@ -24,10 +25,12 @@ export default function Home() {
         preTitle="Our Expertise"
         title="End-to-End Technology Solutions"
       >
-        Discover how Ekspertas Engineering can transform your business through our 
-        comprehensive range of services. From custom software development to advanced 
+        Discover how Ekspertas Engineering can transform your business through our
+        comprehensive range of services. From custom software development to advanced
         data analytics, we&apos;re here to drive your digital success.
       </SectionTitle>
+
+      <Services />
 
       <Video videoId="fZ0D0cnR88E" />
 
@@ -35,19 +38,19 @@ export default function Home() {
         preTitle="Client Success Stories"
         title="What Our Clients Say About Us"
       >
-        Here&apos;s what businesses across Zimbabwe and beyond say about their experience 
+        Here&apos;s what businesses across Zimbabwe and beyond say about their experience
         working with Ekspertas Engineering.
       </SectionTitle>
 
       <Testimonials />
 
       <SectionTitle preTitle="FAQ" title="Common Questions">
-        Get answers to frequently asked questions about our services, process, and 
+        Get answers to frequently asked questions about our services, process, and
         how we can help your business succeed in the digital age.
       </SectionTitle>
 
       <Faq />
-      
+
       <Cta />
     </Container>
   );

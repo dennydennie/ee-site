@@ -6,46 +6,34 @@ import { Disclosure } from "@headlessui/react";
 
 export const Navbar = () => {
   const navigation = [
-    {
-      name: "Services",
-      href: "/services",
-      submenu: [
-        { name: "Software Development", href: "/services/software-development" },
-        { name: "Internet Computing", href: "/services/internet-computing" },
-        { name: "Data Analysis", href: "/services/data-analysis" },
-        { name: "DevOps Engineering", href: "/services/devops" },
-      ]
-    },
-    {
-      name: "About",
-      href: "/about",
-    },
-    {
-      name: "Case Studies",
-      href: "/case-studies",
-    },
-    {
-      name: "Careers",
-      href: "/careers",
-    },
-    {
-      name: "Blog",
-      href: "/blog",
-    },
+    // {
+    //   name: "Services",
+    //   href: "/services",
+    //   submenu: [
+    //     { name: "Software Development", href: "/services/software-development" },
+    //     { name: "Internet Computing", href: "/services/internet-computing" },
+    //     { name: "Data Analysis", href: "/services/data-analysis" },
+    //     { name: "DevOps Engineering", href: "/services/devops" },
+    //   ]
+    // },
+    // {
+    //   name: "About",
+    //   href: "/about",
+    // },
   ];
 
   return (
     <div className="w-full">
       <nav className="container relative flex flex-wrap items-center justify-between p-8 mx-auto lg:justify-between xl:px-0">
         {/* Logo  */}
-        <Link href="/" className="flex items-center space-x-2 text-2xl font-medium text-blue-600 dark:text-gray-100">
+        <Link href="/" className="flex items-center space-x-6 text-2xl font-medium text-blue-600 dark:text-gray-100">
           <span>
             <Image
-              src="/img/logo.svg"
-              width="40"
-              height="40"
+              src="/img/logo.jpg"
+              width="100"
+              height="100"
               alt="Ekspertas Engineering"
-              className="w-10"
+              // className="w-20"
             />
           </span>
           <span className="hidden sm:inline-block">Ekspertas Engineering</span>

@@ -1,7 +1,7 @@
 export const benefitOne = {
   title: "Core Services",
   desc: "We deliver comprehensive technology solutions tailored to your business needs",
-  image: "/path/to/service-image.jpg",
+  image: "/img/benefit-one.png",
   bullets: [
     {
       title: "Custom Software Development",
@@ -18,13 +18,28 @@ export const benefitOne = {
       desc: "Transform your data into actionable business insights",
       icon: "your-icon",
     },
+    {
+      title: "Web Development",
+      desc: "Creating responsive and user-friendly websites",
+      icon: "your-icon",
+    },
+    {
+      title: "Web Hosting",
+      desc: "Reliable hosting solutions for your online presence",
+      icon: "your-icon",
+    },
+    {
+      title: "Email Hosting",
+      desc: "Professional email services for your business",
+      icon: "your-icon",
+    },
   ],
 };
 
 export const benefitTwo = {
   title: "Technical Excellence",
   desc: "Our expertise ensures your project's success from start to finish",
-  image: "/path/to/tech-image.jpg",
+  image: "/img/benefit-two.png",
   bullets: [
     {
       title: "DevOps Engineering",
@@ -39,6 +54,21 @@ export const benefitTwo = {
     {
       title: "24/7 Support",
       desc: "Dedicated technical support whenever you need it",
+      icon: "your-icon",
+    },
+    {
+      title: "Web Development",
+      desc: "Creating responsive and user-friendly websites",
+      icon: "your-icon",
+    },
+    {
+      title: "Web Hosting",
+      desc: "Reliable hosting solutions for your online presence",
+      icon: "your-icon",
+    },
+    {
+      title: "Email Hosting",
+      desc: "Professional email services for your business",
       icon: "your-icon",
     },
   ],
