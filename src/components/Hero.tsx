@@ -1,6 +1,24 @@
 import Image from "next/image";
 import { Container } from "@/components/Container";
-import heroImg from "../../public/img/tech-hero.png";
+import heroImg from "../../public/img/tech-hero.png"
+
+const clients = [
+  {
+    name: "Reatshwana Investments",
+    image: "/img/clients/reatshwana.png",
+    website: "https://www.reatshwanainvestments.co.za",
+  },
+  {
+    name: "Civil Projects Inc",
+    image: "/img/clients/civilprojects.png",
+    website: "https://www.civilprojectsinc.co.zw",
+  },
+  {
+    name: "Marineland Bronx",
+    image: "/img/clients/marineland.png",
+    website: "https://www.marineland-bronx.co.za",
+  },
+];
 
 export const Hero = () => {
   return (
@@ -56,45 +74,39 @@ export const Hero = () => {
           </div>
         </div>
       </Container>
+      {/* TODO: Rotating clients when array is more than 3 */}
       <Container>
         <div className="flex flex-col justify-center">
           <div className="text-xl text-center text-gray-700 dark:text-white">
-            Trusted by <span className="text-blue-600">leading</span>{" "}
-            organizations across Zimbabwe
+            Trusted by <span className="text-blue-600">many</span>{" "}
+            organizations across Africa
           </div>
 
           <div className="flex flex-wrap justify-center gap-5 mt-10 md:justify-around">
-            <div className="pt-2 text-gray-400 dark:text-gray-400">
-              <ClientLogo1 />
-            </div>
-            <div className="text-gray-400 dark:text-gray-400">
-              <ClientLogo1 />
-            </div>
-            <div className="text-gray-400 dark:text-gray-400">
-              <ClientLogo1 />
-            </div>
-            <div className="pt-1 text-gray-400 dark:text-gray-400">
-              <ClientLogo1 />
-            </div>
-            <div className="pt-2 text-gray-400 dark:text-gray-400">
-              <ClientLogo1 />
-            </div>
+            {clients.map((client, index) => (
+              <a
+                key={index}
+                href={client.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="pt-2 text-gray-400 dark:text-gray-400 transition-transform duration-300 hover:scale-110 group relative"
+              >
+                <Image
+                  src={client.image}
+                  width={120}
+                  height={40}
+                  alt={client.name}
+                  className="filter grayscale hover:grayscale-0 transition-all duration-300"
+                />
+                <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-gray-800 text-white px-2 py-1 rounded text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {client.name}
+                </span>
+              </a>
+            ))}
           </div>
         </div>
       </Container>
     </>
   );
 }
-
-const ClientLogo1 = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="120"
-    height="40"
-    viewBox="0 0 120 40"
-    fill="currentColor"
-    className="opacity-75 hover:opacity-100 transition-opacity">
-    <rect width="120" height="40" rx="8" />
-  </svg>
-);
 

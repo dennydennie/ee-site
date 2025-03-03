@@ -55,11 +55,6 @@ export const benefitTwo = {
       title: "24/7 Support",
       desc: "Dedicated technical support whenever you need it",
       icon: "your-icon",
-    },
-    {
-      title: "Expert Knowledge",
-      desc: "Our expertise will add value to your operations",
-      icon: "your-icon",
-    },
+    }
   ],
 }; 

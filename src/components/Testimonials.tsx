@@ -37,7 +37,7 @@ export const Testimonials = () => {
 
             <Avatar
               image={ctoImage}
-              name="Chiedza Mutasa"
+              name="Farai Ndlovu"
               title="CTO, African Banking Corporation"
             />
           </div>
@@ -52,7 +52,7 @@ export const Testimonials = () => {
 
             <Avatar
               image={managerImage}
-              name="Farai Ndlovu"
+              name="Jeffrey Thomas"
               title="IT Manager, Zimbabwe Telecoms"
             />
           </div>

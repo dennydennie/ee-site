@@ -23,20 +23,20 @@ export const Navbar = () => {
   ];
 
   return (
-    <div className="w-full">
-      <nav className="container relative flex flex-wrap items-center justify-between p-8 mx-auto lg:justify-between xl:px-0">
+    <div className="w-full sticky top-0 bg-white dark:bg-gray-900 z-50">
+      <nav className="container relative flex flex-wrap items-center justify-between p-4 mx-auto lg:justify-between xl:px-0">
         {/* Logo  */}
         <Link href="/" className="flex items-center space-x-6 text-2xl font-medium text-blue-600 dark:text-gray-100">
           <span>
             <Image
               src="/img/logo.jpg"
-              width="100"
-              height="100"
+              width="200"
+              height="200"
               alt="Ekspertas Engineering"
-              className="w-20"
+              className="w-32"
             />
           </span>
-          <span className="hidden sm:inline-block">Ekspertas Engineering</span>
+          {/* <span className="hidden sm:inline-block">Ekspertas Engineering</span> */}
         </Link>
 
         {/* Contact & Theme */}

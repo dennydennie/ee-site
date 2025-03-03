@@ -1,7 +1,6 @@
 import { Container } from "@/components/Container";
 import { Hero } from "@/components/Hero";
 import { SectionTitle } from "@/components/SectionTitle";
-import { Video } from "@/components/Video";
 import { Testimonials } from "@/components/Testimonials";
 import { Faq } from "@/components/Faq";
 import { Cta } from "@/components/Cta";
@@ -11,6 +10,7 @@ export default function Home() {
   return (
     <Container>
       <Hero />
+
       <SectionTitle
         preTitle="Why Choose Ekspertas Engineering"
         title="Your Technology Partner in Zimbabwe"
@@ -19,24 +19,20 @@ export default function Home() {
         delivering cutting-edge solutions in software development, internet computing,
         data analysis, and DevOps engineering.
       </SectionTitle>
-
+      <SectionTitle
+        title="Our Services"
+      >
+        At Ekspertas Engineering, we provide a wide range of services including custom software development, data analytics, and DevOps solutions tailored to meet your business needs.
+      </SectionTitle>
+      <Services />
 
       <SectionTitle
-        preTitle="Our Expertise"
         title="End-to-End Technology Solutions"
       >
         Discover how Ekspertas Engineering can transform your business through our
         comprehensive range of services. From custom software development to advanced
         data analytics, we&apos;re here to drive your digital success.
       </SectionTitle>
-
-      <SectionTitle
-        preTitle="Our Services"
-        title="What We Offer"
-      >
-        At Ekspertas Engineering, we provide a wide range of services including custom software development, data analytics, and DevOps solutions tailored to meet your business needs.
-      </SectionTitle>
-      <Services />
 
       {/* <Video videoId="fZ0D0cnR88E" /> */}
 

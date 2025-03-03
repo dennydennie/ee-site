@@ -1,48 +1,49 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { benefitOne, benefitTwo } from "./data"; // Import the benefits data
 import { SectionTitle } from "./SectionTitle"; // Import SectionTitle for headings
 import { Cta } from "./Cta"; // Import Cta for call to action
 
-export const Services = () => {
-  return (
-    <section className="py-16">
-      <SectionTitle title="Our Services" preTitle="What We Offer" align="center" />
-      
-      <div className="max-w-4xl mx-auto">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-          <div className="p-6 border rounded-lg shadow-md">
-            <img src={benefitOne.image} alt={benefitOne.title} className="mb-4" />
-            <h3 className="text-xl font-semibold">{benefitOne.title}</h3>
-            <p className="mb-4">{benefitOne.desc}</p>
-            <ul>
-              {benefitOne.bullets.map((bullet, index) => (
-                <li key={index} className="flex items-center mb-2">
-                  <div>
-                    <strong>{bullet.title}</strong>: {bullet.desc}
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
+export interface ServiceType{
+  title: string;
+  desc: string;
+}
 
-          <div className="p-6 border rounded-lg shadow-md">
-            <img src={benefitTwo.image} alt={benefitTwo.title} className="mb-4" />
-            <h3 className="text-xl font-semibold">{benefitTwo.title}</h3>
-            <p className="mb-4">{benefitTwo.desc}</p>
-            <ul>
-              {benefitTwo.bullets.map((bullet, index) => (
-                <li key={index} className="flex items-center mb-2">
-                  <div>
-                    <strong>{bullet.title}</strong>: {bullet.desc}
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
+export const Services = () => {
+  // Combine and deduplicate services from both benefits
+  const allServices = [
+    ...benefitOne.bullets,
+    ...benefitTwo.bullets,
+  ].reduce((unique, service) => {
+    if (!unique.some(item => item.title === service.title)) {
+      unique.push(service);
+    }
+    return unique;
+  }, [] as ServiceType[]);
+
+  return (
+    <section className="py-2">
+      <SectionTitle title="Our Expertise" align="center" />
+      
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {allServices.map((service, index) => (
+            <div key={index} className="p-6 border rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              <img 
+                src={benefitOne.image} 
+                alt={service.title} 
+                className="w-full h-48 object-cover mb-4 rounded-md"
+              />
+              <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+              <p className="text-gray-600">{service.desc}</p>
+            </div>
+          ))}
         </div>
       </div>
 
-      <Cta /> {/* Include the call to action component */}
+      <div className="mt-16">
+        <Cta />
+      </div>
     </section>
   );
 };
